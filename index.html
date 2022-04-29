@@ -33,5 +33,15 @@
             <a-text position="0 -0.5 0" value="hello " ></a-text>
           </a-entity>
       </a-scene>
+
+      <script>
+        const gl = document.createElement('canvas').getContext('webgl2');
+        if (!gl) {
+          console.log('your browser/OS/drivers do not support WebGL2');
+        } else {
+          console.log('webgl2 works!');
+        }
+      </script>
+
     </body>
   </html>
