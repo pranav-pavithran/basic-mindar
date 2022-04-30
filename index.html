@@ -6,41 +6,33 @@
       <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
       <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+      <script src="./script.js" ></script>
 
-      <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+      <!-- <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.1/dist/aframe-text-geometry-component.min.js"></script>
       <script src="https://cdn.rawgit.com/richardanaya/aframe-canvas/master/index.js"></script>
-      <script src="https://ejeinc.github.io/aframe-canvas-text/canvas-text.js"></script>
+      <script src="https://ejeinc.github.io/aframe-canvas-text/canvas-text.js"></script> -->
 
-      <script data-consolejs-channel="6cd027e4-9e66-cffc-22bb-8f4f96060448" src="https://remotejs.com/agent/agent.js"></script>
+      <!-- <script data-consolejs-channel="6cd027e4-9e66-cffc-22bb-8f4f96060448" src="https://remotejs.com/agent/agent.js"></script> -->
 
     </head>
-    <body>
+    <body onload="loadFunction()" >
       <a-scene mindar-image="imageTargetSrc: https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/trensertest/webar-demo/main/track/IMG_3013.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
-      <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/card.png" />
-      <!-- <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item> -->
-      <!-- <a-asset-item id="avatarModel" src="./Pixel_Hearts.glb"></a-asset-item> -->
+      <!-- <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/card.png" /> -->
         </a-assets>
   
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
   
-        <a-entity mindar-image-target="targetIndex: 0">
-          <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
-          <!-- <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="2 2 2" animation-mixer src="#avatarModel"> -->
-            <!-- <a-plane scale="0.5 0.5 0.5" position="0 0 0" rotation="0 0 0" width="5" height="5" canvas-material="width:512; height:512" canvas-text="text:我们会找到解决方案; font: 50px serif; fillStyle: #006064"></a-plane> -->
-            <a-troika-text color="red" font="./Rockwell.TTF" value="Hello world"></a-troika-text>
-            <!-- <a-entity troika-text="value: Hello world!"></a-entity> -->
-            <a-text negate="false" font="./CutiveMono/CutiveMono-msdf.json" position="0 -0.5 0" value="hello there" ></a-text>
+        <a-entity id="#modelEntity" mindar-image-target="targetIndex: 0">
+        
+            <!-- <a-troika-text color="red" font="./SawarabiMincho.ttf" value="こんにちは世界"></a-troika-text> -->
+            <!-- <a-text negate="false" font="./CutiveMono/CutiveMono-msdf.json" position="0 -0.5 0" value="hello there" ></a-text> -->
+
           </a-entity>
       </a-scene>
 
       <script>
-        const gl = document.createElement('canvas').getContext('webgl2');
-        if (!gl) {
-          console.log('your browser/OS/drivers do not support WebGL2');
-        } else {
-          console.log('webgl2 works!');
-        }
+        
       </script>
 
     </body>
