@@ -7,7 +7,13 @@ function loadFunction(params) {
     const markerDiv = document.createElement("a-troika-text");
 
     markerDiv.setAttribute("color", "red");
-    markerDiv.setAttribute("font", `./fonts/${font}.ttf`);
+    if(font === 'HiraminPro'){
+        
+        markerDiv.setAttribute("font", `./fonts/${font}.otf`);
+    }else{
+
+        markerDiv.setAttribute("font", `./fonts/${font}.ttf`);
+    }
     markerDiv.setAttribute("value", text);
 
     var element = document.getElementById("#modelEntity");
